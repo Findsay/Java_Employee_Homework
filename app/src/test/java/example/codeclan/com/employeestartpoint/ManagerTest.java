@@ -22,4 +22,6 @@ public class ManagerTest {
     public void canGetDeptName() {
         assertNull(manager.getDeptName());
     }
+
+
 }

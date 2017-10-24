@@ -1,7 +1,6 @@
 package example.codeclan.com.employeestartpoint;
 
 
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -74,6 +73,17 @@ public class EmployeeTest {
         admin.setName("Tom");
         assertEquals("Tom", admin.getName());
 
+
+    }
+
+    @Test
+    public void cantSetNametoBlank() {
+        employee.setName("");
+        assertEquals(null, employee.getName());
+        employee.setName("Fred");
+        employee.setName(null);
+        assertEquals("Fred", employee.getName());
+
     }
 
     @Test
@@ -86,6 +96,8 @@ public class EmployeeTest {
         assertEquals(3000.0, engineer.getSalary(), 0.1);
         admin.raiseSalary(4000.0);
         assertEquals(4000.0, admin.getSalary(), 0.1);
+        admin.raiseSalary(-1000);
+        assertEquals(4000, admin.getSalary(), 0.1);
     }
 
 }

@@ -7,6 +7,7 @@ package example.codeclan.com.employeestartpoint;
 public class Manager extends Employee {
     private String dept;
 
+
     public Manager() {
         dept = null;
     }
@@ -14,4 +15,6 @@ public class Manager extends Employee {
     public String getDeptName() {
          return dept;
     }
+
+
 }
